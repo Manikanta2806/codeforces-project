@@ -79,11 +79,18 @@
                 return;
             }
 
-            let rank;
-
-
-            document.getElementById('rankModalBody').innerText = `Your rank is: ${rank}`;
-            $('#rankModal').modal('show');
+            let prediction = prediction;
+            if(prediction>57.45544089){
+                alert( 'you are not having sufficient skills! please practice more problems');
+                document.getElementById('rankModalBody').innerText = `Your rank is: ${prediction}`;
+                $('#rankModal').modal('show');
+            }
+            else{
+                alert(`you have sufficient skills! you can apply for any problem solving interviews`);
+                document.getElementById('rankModalBody').innerText = `Your rank is: ${prediction}`;
+                $('#rankModal').modal('show');
+            }
+          
         }
     </script>
 
